@@ -11,6 +11,7 @@ public class SpringBootJdbcController {
     @RequestMapping("/insert")  
     public String index(){  
         //for mysql  //jdbc.execute("insert into user(name,email)values('sandeepKadu','sk@yopmail.com')");  
+        //comment added for learn git
     	jdbc.execute("INSERT INTO user (name, email) VALUES ('sk', 'sbk1.kadu@yopmail.com')");
         return "data inserted Successfully";  
     }  
