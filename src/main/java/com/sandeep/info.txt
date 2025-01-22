@@ -1,0 +1,37 @@
+ERROR :
+java.sql.SQLException: Access denied for user 'root  '@'localhost' (using password: YES)
+
+Ans :
+
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY '%password%' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY '%password@1%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+Don't forget to replace %password% with real password.
+
+
+CREATE USER 'admin'@'localhost' IDENTIFIED BY 'password@1';
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost'
+WITH GRANT OPTION;
+
+CREATE USER 'admin'@'%' IDENTIFIED BY 'password@1';
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%'
+WITH GRANT OPTION;
+
+
+
+============NOT WORKED WITH MYSQL SO H2 USED===========
+==h2=create script====
+
+DROP TABLE IF EXISTS user;  
+CREATE TABLE user (  
+id INT AUTO_INCREMENT  PRIMARY KEY,  
+name VARCHAR(50) NOT NULL,  
+email VARCHAR(50) NOT NULL  
+);
+
+
+select * from user;
+
+INSERT INTO user (name, email) VALUES ('sandeep', 'sbk.kadu@yopmail.com');  
+ ======================================================================
