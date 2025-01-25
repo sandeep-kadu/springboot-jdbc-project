@@ -12,6 +12,9 @@ public class SpringBootJdbcController {
     public String index(){  
         //for mysql  //jdbc.execute("insert into user(name,email)values('sandeepKadu','sk@yopmail.com')");  
         //comment added for learn git
+        //comment added for learn 2 on 25 jan 2025 
+    	//ok
+
     	jdbc.execute("INSERT INTO user (name, email) VALUES ('sk', 'sbk1.kadu@yopmail.com')");
         return "data inserted Successfully";  
     }  
