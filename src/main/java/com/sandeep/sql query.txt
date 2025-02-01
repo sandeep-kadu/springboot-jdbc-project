@@ -1,0 +1,35 @@
+Write an SQL query to fetch the EmpId and FullName of all the employees working under the Manager with id – ‘986’.
+
+ 
+Employee	 	 	 	 	 
+EmpId	FullName	ManagerId	DateOfJoining	City	dept_id
+121	John Snow	321	01-31-2019	Toronto	1
+321	Walter White	986	01-30-2020	California	2
+421	Kuldeep Rana	876	27-11-2021	New Delhi	3
+521	Kuldeep Rana	876	27-11-2022	New Delhi	4
+621	jack	986	27-11-2022	New York	4
+ 
+ 
+ 
+SQL query to fetch all the Employee from employee table who  joined in the Year 2022
+ 
+ select * from Employee where DateOfJoining LIKE %2022%;
+ 
+ SELECT *
+FROM Employee
+WHERE YEAR(DateOfJoining) = 2022;
+
+ 
+Write an SQL query to fetch the EmpId and FullName of all the employees working under the Manager with id – ‘986’.
+ 
+  select EmpId,FullName from Employee where ManagerId = '986';
+  
+  SELECT EmpId, FullName
+FROM Employee
+WHERE ManagerId = 986;
+
+
+
+String myStr = null;
+boolean res = myStr.contains("a");
+System.out.println(res);
