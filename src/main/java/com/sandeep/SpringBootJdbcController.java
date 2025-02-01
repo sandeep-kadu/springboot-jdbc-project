@@ -16,6 +16,9 @@ public class SpringBootJdbcController {
     	//ok ok
     	//changes on 1-2-2025 version 2
 
+    	//changes on 1-2-2025
+        //this line added on github editor on 1 feb 2025
+
     	jdbc.execute("INSERT INTO user (name, email) VALUES ('sk', 'sbk1.kadu@yopmail.com')");
         return "data inserted Successfully";  
     }  
